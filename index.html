@@ -80,6 +80,28 @@
 
     nav a.cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .nav-links a:not(.cta-btn) {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:not(.cta-btn):hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.cta-btn) { display: none; }
+    }
+
     .hero {
       position: relative;
       min-height: 100vh;
@@ -489,7 +511,12 @@
 <body>
   <nav>
     <a href="/" class="logo">My<span>LOA</span></a>
-    <a href="#contact" class="cta-btn">Request Demo</a>
+    <div class="nav-links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="#contact" class="cta-btn">Request Demo</a>
+    </div>
   </nav>
 
   <section class="hero">
